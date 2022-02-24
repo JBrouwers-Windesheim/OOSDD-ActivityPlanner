@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace ActivityPlanner.ConsoleUI
 {
+    //Every Person should always have a first name and a surname
+    // a surname prefix is optional
     internal abstract class Person
     {
         #region Properties

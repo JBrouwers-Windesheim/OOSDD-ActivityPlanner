@@ -8,6 +8,7 @@ namespace ActivityPlanner.ConsoleUI
 {
     internal class ConsoleHelper
     {
+        //TODO: DRY-up there is still some duplicate code here..
 
         public static string GetUserInput(string description)
         {

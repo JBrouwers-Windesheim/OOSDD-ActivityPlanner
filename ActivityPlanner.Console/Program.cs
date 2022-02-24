@@ -7,13 +7,17 @@ organizer.FirstName = ConsoleHelper.GetUserInput("firstname", true);
 organizer.SurnamePrefix = ConsoleHelper.GetUserInput("surname prefix");
 organizer.Surname = ConsoleHelper.GetUserInput("surname", true);
 
-string[] inviteeFirstName;
-string[] inviteeSurnamePrefix;
-string[] inviteeSurname;
+//Ask which activity is being organized
+string activityTitle = ConsoleHelper.GetUserInput("Title", true);
+string activityDescription = ConsoleHelper.GetUserInput("Description");
 
+//Ask which dates the invitees can choose from
 
-
+//Ask for the amount of invitees
+Invitee[] invitees = new Invitee[1];
 
 string fullName = $"{organizer.FirstName} {(organizer.SurnamePrefix + " ").TrimStart()}{organizer.Surname}";
-Console.WriteLine("Hello " + fullName);
+
+//Display the invitations per invitee
+Console.WriteLine("Organizer " + fullName);
 

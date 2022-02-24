@@ -8,5 +8,10 @@ namespace ActivityPlanner.ConsoleUI
 {
     internal class Invitee: Person
     {
+        public Invitee(string firstName, string surname)
+            :base(firstName, surname)
+        {
+
+        }
     }
 }
