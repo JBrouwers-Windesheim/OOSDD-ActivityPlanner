@@ -9,8 +9,8 @@ namespace ActivityPlannerUnitTest
         public void FullnameWithSurnamePrefix()
         {
             //arrange
-            var invitee = new Invitee("Jan", "Jansen");
-            invitee.SurnamePrefix = "van";
+            var invitee = new Invitee("Jan", "Jansen") { SurnamePrefix = "van" };
+            //invitee.SurnamePrefix = "van";
 
             var expectedFullname = "van Jansen, Jan";
             var actualFullname = string.Empty;

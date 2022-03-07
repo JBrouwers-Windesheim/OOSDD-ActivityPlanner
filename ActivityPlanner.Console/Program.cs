@@ -27,7 +27,13 @@ inviteeList.Add(new Invitee("Marie", "Mariessen"));
 inviteeList.Add(new Invitee("Pieter", "Pietersen"));
 
 //sorteer de genodigden (standaard sortering is op achternaam)
+inviteeList.Sort();//implementeer de generic IComparable in Person (by Surname)
 
+//en geef de genodigden weer
+foreach (var invitee in inviteeList)
+{
+    Console.WriteLine(invitee.FullName);
+}
 
 
 //Display the invitations per invitee
