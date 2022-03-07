@@ -8,7 +8,7 @@ namespace ActivityPlanner.ConsoleUI
 {
     //Every Person should always have a first name and a surname
     // a surname prefix is optional
-    internal class Person
+    public class Person
     {
         #region Properties
         public string FirstName { get; set; }

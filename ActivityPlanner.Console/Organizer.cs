@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ActivityPlanner.ConsoleUI
 {
-    internal class Organizer: Person
+    public class Organizer: Person
     {
         //It's important to know in which order chained constructors are called (to this and base)
         //Place a breakpoint on this constructor and follow step by step code execution when creation an new Organizer instance

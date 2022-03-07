@@ -22,11 +22,11 @@ Console.WriteLine(inviteeArray[0].FirstName);
 //Maak een Person Array, stop er Invitees in en lees de invitees uit 
 
 List<Invitee> inviteeList = new List<Invitee>();
-//inviteeList.Add()
+inviteeList.Add(new Invitee("Jan", "Jansen"));
+inviteeList.Add(new Invitee("Marie", "Mariessen"));
+inviteeList.Add(new Invitee("Pieter", "Pietersen"));
 
-//List<string> stringList = new List<string>();
-//stringList.Add()
-
+//sorteer de genodigden (standaard sortering is op achternaam)
 
 
 
