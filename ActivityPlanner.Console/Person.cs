@@ -8,7 +8,7 @@ namespace ActivityPlanner.ConsoleUI
 {
     //Every Person should always have a first name and a surname
     // a surname prefix is optional
-    internal abstract class Person
+    internal class Person
     {
         #region Properties
         public string FirstName { get; set; }
@@ -27,6 +27,13 @@ namespace ActivityPlanner.ConsoleUI
                 _surname = value;
             }
         }
+
+        public string FullName { 
+            get {
+                return GetFullName();
+            } 
+        }
+
         #endregion
 
         #region Constructors
@@ -39,5 +46,14 @@ namespace ActivityPlanner.ConsoleUI
 
         #endregion
 
+        protected virtual string GetFullName() 
+        {
+            return $"{this.FirstName} {(this.SurnamePrefix + " " ).TrimStart() +  this.Surname}";
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + "\n" + this.GetFullName();
+        }
     }
 }

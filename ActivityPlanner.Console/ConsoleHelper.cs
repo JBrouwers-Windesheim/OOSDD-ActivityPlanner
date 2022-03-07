@@ -16,6 +16,7 @@ namespace ActivityPlanner.ConsoleUI
             string? userInput = Console.ReadLine();
             Console.Clear();
             return userInput;
+            //return GetUserInput(description, false);
         }
 
         public static string GetUserInput(string description, bool required) 
@@ -23,9 +24,10 @@ namespace ActivityPlanner.ConsoleUI
             string userInput = string.Empty;
             do
             {
-                Console.Write($"Please enter your {description}: ");
-                userInput = Console.ReadLine();
-                Console.Clear();
+                //Console.Write($"Please enter your {description}: ");
+                //userInput = Console.ReadLine();
+                //Console.Clear();
+                userInput = GetUserInput(description);
 
             } while (required && string.IsNullOrWhiteSpace(userInput));
 

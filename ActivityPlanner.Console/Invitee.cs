@@ -13,5 +13,15 @@ namespace ActivityPlanner.ConsoleUI
         {
 
         }
+
+        protected override string GetFullName()
+        {
+            //maak een vergelijkbare oplossing maar dan met de stringbuilder classe
+
+            //eerst tussenvoegsels, dan achtenaam, dan komma, dan voornaam
+            return (this.SurnamePrefix + " ").TrimStart() + $"{this.Surname}, {this.FirstName}";
+        }
+
+        
     }
 }
