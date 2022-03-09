@@ -26,13 +26,18 @@ namespace ActivityPlannerUnitTest
         [Fact]
         public void FullnameWithoutSurnamePrefix()
         {
+
             //arrange
+            var invitee = new Invitee("Jan", "Jansen") ;
+
+            var expectedFullname = "van Jansen, Jan";
+            var actualFullname = string.Empty;
 
             //act
+            actualFullname = invitee.FullName;
 
             //assert
-
-
+            Assert.Equal(expectedFullname, actualFullname);
         }
     }
 }

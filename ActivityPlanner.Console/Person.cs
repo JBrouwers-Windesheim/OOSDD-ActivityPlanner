@@ -8,7 +8,7 @@ namespace ActivityPlanner.ConsoleUI
 {
     //Every Person should always have a first name and a surname
     // a surname prefix is optional
-    public class Person
+    public class Person: IComparable<Person>
     {
         #region Properties
         public string FirstName { get; set; }
@@ -55,5 +55,12 @@ namespace ActivityPlanner.ConsoleUI
         {
             return base.ToString() + "\n" + this.GetFullName();
         }
+
+        public int CompareTo(Person? other)
+        {
+            if (other == null) throw new ArgumentNullException();
+            return this.Surname.CompareTo(other.Surname);
+        }
+
     }
 }
