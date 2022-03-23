@@ -34,5 +34,9 @@ namespace ActivityPlanner.ConsoleUI
             return userInput;
         }
 
+        public static void Print() 
+        {
+        
+        }
     }
 }
